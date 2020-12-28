@@ -1,4 +1,4 @@
-public class BanckAccountApp {
+public class BankAccountApp {
 
     public static void main(String[] args) {
         // read from csv file then create new account
