@@ -15,12 +15,12 @@ public abstract class Account implements IRate {
         this.sSN = sSN;
         balance = initDeposit;
 
-        System.out.println("Name: " + name + " SSN: " + sSN + " BALANCE: $" + balance);
+//        System.out.println("Name: " + name + " SSN: " + sSN + " BALANCE: $" + balance);
 
         // set account number
 
         this.accountNumber =setAccountNumber();
-        System.out.println("ACCOUNT NUMBER: "+ this.accountNumber);
+//        System.out.println("ACCOUNT NUMBER: "+ this.accountNumber);
     }
 
     private String setAccountNumber() {
@@ -29,6 +29,16 @@ public abstract class Account implements IRate {
         int randomNumber = (int)(Math.random()*Math.pow(10,3));
 
         return lastTwoOffSSN + uniqueID + randomNumber;
+    }
+
+    // list common methods
+    public void showInfo(){
+        System.out.println(
+                "NAME: "+name+
+                        "\nACCOUNT NUMBER: "+accountNumber+
+                        "\nBALANCE: "+ balance
+        );
+
     }
 
 }

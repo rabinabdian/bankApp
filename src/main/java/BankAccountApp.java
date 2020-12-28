@@ -4,8 +4,10 @@ public class BankAccountApp {
         // read from csv file then create new account
 
         Checking ch = new Checking("Tom Wire","64644566",1500);
+        ch.showInfo();
 
         Savings sv = new Savings("RichConfiguration Low","4664565465",2500);
+        sv.showInfo();
 
 
     }
