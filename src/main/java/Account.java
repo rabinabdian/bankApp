@@ -18,10 +18,15 @@ public abstract class Account implements IRate {
 //        System.out.println("Name: " + name + " SSN: " + sSN + " BALANCE: $" + balance);
 
         // set account number
-
+        index++;
         this.accountNumber =setAccountNumber();
-//        System.out.println("ACCOUNT NUMBER: "+ this.accountNumber);
+        System.out.println(getBaseRate());
+
+        setRate();
+
     }
+
+    public abstract void setRate();
 
     private String setAccountNumber() {
         String lastTwoOffSSN = sSN.substring(sSN.length()-2 , sSN.length());
@@ -36,7 +41,8 @@ public abstract class Account implements IRate {
         System.out.println(
                 "NAME: "+name+
                         "\nACCOUNT NUMBER: "+accountNumber+
-                        "\nBALANCE: "+ balance
+                        "\nBALANCE: "+ balance+
+                        "\n RATE: "+ rate
         );
 
     }
