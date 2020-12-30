@@ -1,4 +1,4 @@
-public abstract class Account implements IRate {
+public abstract class Account<method> implements IRate {
 
     // props
     String name;
@@ -36,12 +36,38 @@ public abstract class Account implements IRate {
         return lastTwoOffSSN + uniqueID + randomNumber;
     }
 
-    // list common methods
+
+    // list common methods - transactions
+
+    public void deposit(double amount) {
+        balance+=amount;
+        System.out.println("deposit $"+amount);
+        printBalance();
+    }
+    public void withdraw(double amount) {
+        balance-=amount;
+        System.out.println("withdraw $"+amount);
+        printBalance();
+    }
+    public void transfer(String toWhere , double amount) {
+        balance-=amount;
+        System.out.println("transfer $"+amount+" to "+toWhere);
+        printBalance();
+    }
+
+    public void printBalance(){
+        System.out.println(
+                "NAME: "+name+
+                        "\nACCOUNT NUMBER: "+accountNumber+
+                        "\nyour balance is now: $"+balance);
+        System.out.println("*******************************");
+    }
+
     public void showInfo(){
         System.out.println(
                 "NAME: "+name+
                         "\nACCOUNT NUMBER: "+accountNumber+
-                        "\nBALANCE: "+ balance+
+                        "\nBALANCE: $"+ balance+
                         "\n RATE: "+ rate
         );
 

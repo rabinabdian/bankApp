@@ -8,7 +8,8 @@ public class BankAccountApp {
 
         Savings sv = new Savings("RichConfiguration Low","4664565465",2500);
         sv.showInfo();
-
+        sv.deposit(20);
+        sv.showInfo();
 
     }
 }

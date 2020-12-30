@@ -36,7 +36,7 @@ public class Checking extends Account{
                         "\n Debit Card Number: "+ debitCardNumber +
                         "\n Debit Card PIN: "+ debitCardPIN
         );
-        System.out.println("***********************");
+        System.out.println("*******************************");
 
     }
 

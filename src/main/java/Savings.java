@@ -36,6 +36,6 @@ public class Savings extends Account{
                         "\n Safety Deposit Box ID: "+ safetyDepositBoxID +
                         "\n Safety Deposit Box KEY: "+ safetyDepositBoxKEY
         );
-        System.out.println("***********************");
+        System.out.println("*******************************");
     }
 }
