@@ -5,6 +5,10 @@ public class BankAccountApp {
 
         Checking ch = new Checking("Tom Wire","64644566",1500);
         ch.showInfo();
+        ch.transfer("USA",50);
+        ch.showInfo();
+        ch.withdraw(250);
+        ch.showInfo();
 
         Savings sv = new Savings("RichConfiguration Low","4664565465",2500);
         sv.showInfo();

@@ -1,4 +1,8 @@
+import java.rmi.server.UID;
+import java.util.UUID;
+
 public abstract class Account<method> implements IRate {
+
 
     // props
     String name;
@@ -8,6 +12,7 @@ public abstract class Account<method> implements IRate {
     static int index = 10000;
     String accountNumber;
     double rate;
+    UUID transactionId ;
 
     public Account(String name, String sSN, double initDeposit) {
 
@@ -40,18 +45,24 @@ public abstract class Account<method> implements IRate {
     // list common methods - transactions
 
     public void deposit(double amount) {
+        transactionId = UUID.randomUUID();
         balance+=amount;
-        System.out.println("deposit $"+amount);
+        System.out.println("deposit $"+amount+
+                "\ntransaction id : " + transactionId);
         printBalance();
     }
     public void withdraw(double amount) {
+        transactionId = UUID.randomUUID();
         balance-=amount;
-        System.out.println("withdraw $"+amount);
+        System.out.println("withdraw $"+amount+
+                "\ntransaction id : " + transactionId);
         printBalance();
     }
     public void transfer(String toWhere , double amount) {
+        transactionId = UUID.randomUUID();
         balance-=amount;
-        System.out.println("transfer $"+amount+" to "+toWhere);
+        System.out.println("transfer $"+amount+" to "+toWhere+
+                "\ntransaction id : " + transactionId);
         printBalance();
     }
 
