@@ -12,4 +12,16 @@ public class Checking extends Account{
         accountNumber = "2" + accountNumber;
     }
 
+    // list methods for checking
+
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("ACCOUNT TYPE: CHECKING");
+        System.out.println("***********************");
+
+    }
+
+
 }
