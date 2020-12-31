@@ -27,7 +27,7 @@ public class BankAccountApp {
             String sSN = customer[1];
             String accountType = customer[2];
             double initDeposit = Double.parseDouble(customer[3]);
-            if (accountType.equals("Saving")){
+            if (accountType.equals("Savings")){
                 System.out.println("OPEN SAVING ACCOUNT");
                 accounts.add(new Savings(name,sSN,initDeposit));
             }
