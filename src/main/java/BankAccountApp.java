@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.FileHandler;
@@ -9,6 +10,8 @@ import java.util.logging.Logger;
 public class BankAccountApp {
 
     public static void main(String[] args) throws IOException {
+
+        List<Account> accounts = new LinkedList<Account>();
 
         // read csv file then create new account
 
@@ -26,9 +29,11 @@ public class BankAccountApp {
             double initDeposit = Double.parseDouble(customer[3]);
             if (accountType.equals("Saving")){
                 System.out.println("OPEN SAVING ACCOUNT");
+                accounts.add(new Savings(name,sSN,initDeposit));
             }
             else if (accountType.equals("Checking")){
                 System.out.println("OPEN A CHECKING ACCOUNT");
+                accounts.add(new Checking(name,sSN,initDeposit));
             }
             else {
                 System.out.println("ERROR READING ACCOUNT TYPE");
