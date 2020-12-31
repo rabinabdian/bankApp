@@ -28,6 +28,8 @@ public abstract class Account<method> implements IRate {
         System.out.println(getBaseRate());
 
         setRate();
+        transactionId = UUID.randomUUID();
+        System.out.println("Account Creation transaction id : " + transactionId);
 
     }
 
