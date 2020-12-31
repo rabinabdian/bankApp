@@ -12,22 +12,27 @@ public class BankAccountApp {
 
         // read csv file then create new account
 
-
-        Map<String,Object> params = new HashMap<String,Object>();
-        params.put("name", null);
-        params.put("name", null);
-        params.put("name", null);
-        params.put("name", null);
-        params.put("name", null);
-
         List<String[]> newCustomers = CSV.read("src/main/java/NewBankAccounts.csv");
 
         for (String[] customer : newCustomers){
+// print all lines from csv
+//            for (int i = 0; i < customer.length; i++) {
+//                System.out.println(customer[i].toString());
+//            }
 
-            for (int i = 0; i < customer.length; i++) {
-                System.out.println(customer[i].toString());
+            String name = customer[0];
+            String sSN = customer[1];
+            String accountType = customer[2];
+            double initDeposit = Double.parseDouble(customer[3]);
+            if (accountType.equals("Saving")){
+                System.out.println("OPEN SAVING ACCOUNT");
             }
-
+            else if (accountType.equals("Checking")){
+                System.out.println("OPEN A CHECKING ACCOUNT");
+            }
+            else {
+                System.out.println("ERROR READING ACCOUNT TYPE");
+            }
         }
 
 
