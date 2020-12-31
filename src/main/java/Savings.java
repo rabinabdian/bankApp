@@ -12,7 +12,7 @@ public class Savings extends Account{
         accountNumber = "1" + accountNumber;
 
         setSafetyDepositBox();
-
+this.showInfo();
 
     }
     @Override

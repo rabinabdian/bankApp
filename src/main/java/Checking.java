@@ -11,6 +11,7 @@ public class Checking extends Account{
         super(name,sSN,initDeposit);
         accountNumber = "2" + accountNumber;
         setDebitCard();
+        this.showInfo();
     }
 
     @Override

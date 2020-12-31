@@ -18,10 +18,6 @@ public class BankAccountApp {
         List<String[]> newCustomers = CSV.read("src/main/java/NewBankAccounts.csv");
 
         for (String[] customer : newCustomers){
-// print all lines from csv
-//            for (int i = 0; i < customer.length; i++) {
-//                System.out.println(customer[i].toString());
-//            }
 
             String name = customer[0];
             String sSN = customer[1];
