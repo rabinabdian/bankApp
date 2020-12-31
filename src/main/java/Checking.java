@@ -3,8 +3,8 @@ public class Checking extends Account{
 
     // props check
 
-    int debitCardNumber;
-    int debitCardPIN;
+    private int debitCardNumber;
+    private int debitCardPIN;
 
     public Checking(String name , String sSN , double initDeposit) {
         // TODO Auto-generated constructor stub

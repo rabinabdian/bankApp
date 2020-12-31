@@ -5,14 +5,14 @@ public abstract class Account<method> implements IRate {
 
 
     // props
-    String name;
-    String sSN;
-    double balance;
+    private String name;
+    private String sSN;
+    private double balance;
 
-    static int index = 10000;
-    String accountNumber;
-    double rate;
-    UUID transactionId ;
+    private static int index = 10000;
+    protected String accountNumber;
+    protected double rate;
+    private UUID transactionId ;
 
     public Account(String name, String sSN, double initDeposit) {
 
@@ -41,6 +41,12 @@ public abstract class Account<method> implements IRate {
         return lastTwoOffSSN + uniqueID + randomNumber;
     }
 
+    public void compound(){
+        double accruedInterest = balance*(rate/100);
+        balance +=accruedInterest;
+        System.out.println("Accrued Interest: $"+accruedInterest);
+        printBalance();
+    }
 
     // list common methods - transactions
 
