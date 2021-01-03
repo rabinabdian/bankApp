@@ -19,7 +19,6 @@ public class Checking extends Account{
         System.out.println("implement rate for checking ");
         rate = getBaseRate()*.15;
 
-
     }
     // list methods for checking
     private void setDebitCard() {
